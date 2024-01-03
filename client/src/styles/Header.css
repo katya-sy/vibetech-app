@@ -1,0 +1,30 @@
+.header {
+  background-color: var(--dark);
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.header__logo {
+  margin-bottom: -20px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header__nav > * {
+  color: var(--light);
+  font-size: 20px;
+}
+
+.header__icons,
+.header__icons > * {
+  display: flex;
+  gap: 20px;
+}

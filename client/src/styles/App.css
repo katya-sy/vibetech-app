@@ -1,0 +1,37 @@
+:root {
+  --dark: #1f1f1f;
+  --light: #fbfbfb;
+  --medium: #a0a0a0;
+  --accent: #0077ff;
+
+  --font-main: "Montserrat";
+  --font-accent: "Exo2";
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Exo2;
+  src: url("../assets/fonts/Exo2-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: var(--font-main);
+}
+
+body {
+  background-color: var(--light);
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
