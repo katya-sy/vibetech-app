@@ -23,8 +23,7 @@
   font-size: 20px;
 }
 
-.header__icons,
-.header__icons > * {
+.header__icons {
   display: flex;
   gap: 20px;
 }

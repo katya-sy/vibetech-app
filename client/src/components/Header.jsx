@@ -7,37 +7,53 @@ import search from "../assets/img/search.svg";
 import favourite from "../assets/img/favourite.svg";
 import cart from "../assets/img/cart.svg";
 import userIcon from "../assets/img/user.svg";
-import { CATEGORIES_ROUTE } from "../utils/consts";
+import { CATEGORIES_ROUTE, SHOP_ROUTE } from "../utils/consts";
+import { observer } from "mobx-react-lite";
 
-function Header() {
+const Header = observer(() => {
   const { user } = useContext(Context);
 
   return (
     <div className="header">
       <div className="container">
         <div className="header__wrapper">
-          <picture className="header__logo">
+          <Link to={SHOP_ROUTE} className="header__logo">
             <img src={logo} alt="Logo" />
-          </picture>
+          </Link>
           <div className="header__nav">
             <Link to={CATEGORIES_ROUTE}>Категории</Link>
             <a href="#">Обратная связь</a>
             <a href="#">Контакты</a>
           </div>
-          <div className="header__icons">
-            <img src={search} />
-            {user.isAuth && (
-              <div>
+          {user.isAuth ? (
+            <div className="header__icons">
+              <button>
+                <img src={search} />
+              </button>
+              <button>
                 <img src={cart} />
+              </button>
+              <button>
                 <img src={favourite} />
-              </div>
-            )}
-            <img src={userIcon} />
-          </div>
+              </button>
+              <button>
+                <img src={userIcon} />
+              </button>
+            </div>
+          ) : (
+            <div className="header__icons">
+              <button>
+                <img src={search} />
+              </button>
+              <button onClick={() => user.setIsAuth(true)}>
+                <img src={userIcon} />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
-}
+});
 
 export default Header;

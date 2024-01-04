@@ -27,6 +27,12 @@
   font-family: var(--font-main);
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 body {
   background-color: var(--light);
 }
