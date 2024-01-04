@@ -3,8 +3,9 @@ import { makeAutoObservable } from "mobx";
 export default class DeviceStore {
   constructor() {
     this._types = [
-      { id: 1, name: "byt" },
-      { id: 2, name: "phones" },
+      { id: 1, name: "byt", img: "/assets/img/appliances.svg" },
+      { id: 2, name: "phones", img: "/assets/img/phones.svg" },
+      { id: 3, name: "pc", img: "/assets/img/pc.svg" },
     ];
     this._devices = [
       {

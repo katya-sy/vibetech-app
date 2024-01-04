@@ -1,0 +1,21 @@
+.categories-nav {
+  width: 270px;
+  padding: 20px 10px;
+}
+
+.categories-nav li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.categories-nav span {
+  color: var(--dark);
+  font-family: var(--font-accent);
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.categories-nav span:hover {
+  color: var(--accent);
+}
