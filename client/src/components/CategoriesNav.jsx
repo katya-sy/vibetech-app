@@ -10,7 +10,12 @@ const CategoriesNav = observer(() => {
     <div className="categories-nav">
       <ul>
         {device.types.map((type) => (
-          <li key={type.id}>
+          <li
+            key={type.id}
+            onClick={() => {
+              device.setSelectedType(type);
+            }}
+          >
             <img src={type.img} />
             <span>{type.name}</span>
           </li>
