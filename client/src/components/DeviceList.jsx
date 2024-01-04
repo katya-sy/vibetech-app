@@ -10,12 +10,7 @@ const DeviceList = observer(({ deviceCount }) => {
   return (
     <div className="device-list">
       {device.devices.slice(0, deviceCount).map((device) => (
-        <DeviceCard
-          key={device.id}
-          name={device.name}
-          img={device.img}
-          price={device.price}
-        />
+        <DeviceCard key={device.id} device={device} />
       ))}
     </div>
   );
