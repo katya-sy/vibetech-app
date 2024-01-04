@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/UI/Button";
+import Button from "./UI/button/Button.jsx";
 import heart from "../assets/img/heart.svg";
 import "../styles/DeviceMain.css";
 
@@ -30,7 +30,7 @@ function DeviceMain() {
           <p className="device-main__price">{device.price} ₽</p>
         </div>
         <div className="device-main__btns">
-          <Button>Купить</Button>
+          <Button style={{ width: "50%" }}>Купить</Button>
           <button>
             <img src={heart} />
           </button>

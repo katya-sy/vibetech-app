@@ -26,6 +26,8 @@
   text-decoration: none;
   list-style: none;
   font-family: var(--font-main);
+  box-sizing: border-box;
+  font-weight: 400;
 }
 
 button {

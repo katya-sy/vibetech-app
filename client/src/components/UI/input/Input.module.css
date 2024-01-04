@@ -1,0 +1,12 @@
+.input {
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  background: var(--medium);
+  color: var(--dark);
+}
+
+.textarea {
+  resize: none;
+  height: 75px;
+}

@@ -1,0 +1,44 @@
+.footer {
+  margin-top: 100px;
+  padding: 40px 0;
+  background-color: var(--dark);
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  color: var(--light);
+  font-size: 20px;
+}
+
+.footer__form-title {
+  margin-bottom: 30px;
+  color: var(--light);
+  font-family: var(--font-accent);
+  font-size: 20px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__contact a {
+  color: var(--light);
+  font-size: 20px;
+}
