@@ -14,7 +14,7 @@ const Header = observer(() => {
   const { user } = useContext(Context);
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="container">
         <div className="header__wrapper">
           <Link to={SHOP_ROUTE} className="header__logo">
@@ -52,7 +52,7 @@ const Header = observer(() => {
           )}
         </div>
       </div>
-    </div>
+    </header>
   );
 });
 

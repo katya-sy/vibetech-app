@@ -7,21 +7,19 @@ const CategoriesNav = observer(() => {
   const { device } = useContext(Context);
 
   return (
-    <div className="categories-nav">
-      <ul>
-        {device.types.map((type) => (
-          <li
-            key={type.id}
-            onClick={() => {
-              device.setSelectedType(type);
-            }}
-          >
-            <img src={type.img} />
-            <span>{type.name}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className="categories-nav">
+      {device.types.map((type) => (
+        <li
+          key={type.id}
+          onClick={() => {
+            device.setSelectedType(type);
+          }}
+        >
+          <img src={type.img} />
+          <span>{type.name}</span>
+        </li>
+      ))}
+    </ul>
   );
 });
 
