@@ -48,3 +48,10 @@ body {
   justify-content: space-between;
   margin-top: 30px;
 }
+
+.title {
+  margin: 80px 0 50px;
+  color: var(--accent);
+  font-family: var(--font-accent);
+  font-size: 48px;
+}

@@ -5,7 +5,7 @@
 
 .categories-nav li {
   display: flex;
-  align-items: center;
+  align-items: first baseline;
   gap: 5px;
   cursor: pointer;
 }
