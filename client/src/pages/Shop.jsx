@@ -1,6 +1,7 @@
 import React from "react";
 import Promo from "../components/Promo";
 import CategoriesNav from "../components/CategoriesNav";
+import DeviceList from "../components/DeviceList";
 
 function Shop() {
   return (
@@ -8,6 +9,7 @@ function Shop() {
       <CategoriesNav />
       <div>
         <Promo />
+        <DeviceList />
       </div>
     </div>
   );

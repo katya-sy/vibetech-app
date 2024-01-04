@@ -1,0 +1,20 @@
+.device-card {
+  max-width: 270px;
+  color: var(--dark);
+}
+
+.device-card img {
+  margin-bottom: 30px;
+}
+
+.device-card__title,
+.device-card__price {
+  font-family: var(--font-accent);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.device-card__btns {
+  display: flex;
+  gap: 10px;
+}

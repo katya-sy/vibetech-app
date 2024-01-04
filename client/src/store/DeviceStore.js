@@ -28,6 +28,26 @@ export default class DeviceStore {
           "https://c.dns-shop.ru/thumb/st1/fit/320/250/3564920f3bd4276b5731f9aa4766d118/0ccac1c4f7508fce521881ae2788ec7f737241c7dfedb2f196253eed7061ec60.jpg",
         ],
       },
+      {
+        id: 3,
+        name: "Lenovo",
+        price: 9000,
+        desc: "lorem iosum dolor sit amet",
+        img: [
+          "https://c.dns-shop.ru/thumb/st4/fit/320/250/4e4e2dde43b93f00fadf7469170939a3/5563fc08ad6cc591c2fcb652c354e31efed782350452a3573fb83a3846af35fd.jpg",
+          "https://c.dns-shop.ru/thumb/st1/fit/320/250/3564920f3bd4276b5731f9aa4766d118/0ccac1c4f7508fce521881ae2788ec7f737241c7dfedb2f196253eed7061ec60.jpg",
+        ],
+      },
+      {
+        id: 4,
+        name: "AAAAAAAAAA",
+        price: 70000,
+        desc: "lorem iosum dolor sit amet",
+        img: [
+          "https://c.dns-shop.ru/thumb/st4/fit/320/250/4e4e2dde43b93f00fadf7469170939a3/5563fc08ad6cc591c2fcb652c354e31efed782350452a3573fb83a3846af35fd.jpg",
+          "https://c.dns-shop.ru/thumb/st1/fit/320/250/3564920f3bd4276b5731f9aa4766d118/0ccac1c4f7508fce521881ae2788ec7f737241c7dfedb2f196253eed7061ec60.jpg",
+        ],
+      },
     ];
     this._selectedType = {};
     makeAutoObservable(this);
