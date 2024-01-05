@@ -21,7 +21,7 @@ function Footer() {
           </div>
           <div id="feedback" className="footer__column">
             <h3 className="footer__form-title">Нужна помощь? Пишите нам</h3>
-            <Form button={"Отправить"} />
+            <Form buttonText={"Отправить"} feedbackForm />
           </div>
           <div id="contacts" className="footer__column">
             <div className="footer__social">
