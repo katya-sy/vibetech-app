@@ -11,17 +11,26 @@ import help from "./assets/img/help.svg";
 
 function App() {
   const [modalVisible, setModalVisible] = useState(false);
+  const [regModalVisible, setRegModalVisible] = useState(false);
   const { user } = useContext(Context);
 
   const login = (e) => {
     e.preventDefault();
     user.setIsAuth(true);
     setModalVisible(false);
+    setRegModalVisible(false);
   };
+
+  function openModal() {
+    if (modalVisible) {
+      setRegModalVisible(true);
+      setModalVisible(false);
+    } else setModalVisible(true);
+  }
 
   return (
     <BrowserRouter>
-      <Header setModalVisible={setModalVisible} />
+      <Header openModal={openModal} />
       <div className="container">
         <AppRouter />
       </div>
@@ -30,12 +39,25 @@ function App() {
         <h2 className="title form__title">Вход</h2>
         <Form buttonText={"Войти"} login={login} />
         <div style={{ display: "flex", gap: 40 }}>
-          <button style={{ color: "var(--accent)" }}>Зарегистрироваться</button>
+          <button style={{ color: "var(--accent)" }} onClick={openModal}>
+            Зарегистрироваться
+          </button>
           <button className="help">
             <span>Нужна помощь?</span>
             <img src={help} />
           </button>
         </div>
+      </Modal>
+      <Modal
+        modalVisible={regModalVisible}
+        setModalVisible={setRegModalVisible}
+      >
+        <h2 className="title form__title">Регистрация</h2>
+        <Form buttonText={"Войти"} registrationForm login={login} />
+        <button className="help" style={{ alignSelf: "flex-end" }}>
+          <span>Нужна помощь?</span>
+          <img src={help} />
+        </button>
       </Modal>
     </BrowserRouter>
   );

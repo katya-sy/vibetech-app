@@ -10,12 +10,8 @@ import userIcon from "../assets/img/user.svg";
 import { CATEGORIES_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { observer } from "mobx-react-lite";
 
-const Header = observer(({ setModalVisible }) => {
+const Header = observer(({ openModal }) => {
   const { user } = useContext(Context);
-
-  function openModal() {
-    setModalVisible(true);
-  }
 
   return (
     <header className="header">
