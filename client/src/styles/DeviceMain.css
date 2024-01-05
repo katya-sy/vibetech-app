@@ -1,3 +1,9 @@
+.device-main {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
 .device-main__content {
   display: flex;
   gap: 180px;
