@@ -1,12 +1,13 @@
 import React from "react";
 import DeviceMain from "../components/DeviceMain";
+import { observer } from "mobx-react-lite";
 
-function DevicePage() {
+const DevicePage = observer(() => {
   return (
     <div>
       <DeviceMain />
     </div>
   );
-}
+});
 
 export default DevicePage;

@@ -2,8 +2,9 @@ import React from "react";
 import Promo from "../components/Promo";
 import CategoriesNav from "../components/CategoriesNav";
 import DeviceList from "../components/DeviceList";
+import { observer } from "mobx-react-lite";
 
-function Shop() {
+const Shop = observer(() => {
   return (
     <div className="wrapper">
       <CategoriesNav />
@@ -16,6 +17,6 @@ function Shop() {
       </div>
     </div>
   );
-}
+});
 
 export default Shop;
