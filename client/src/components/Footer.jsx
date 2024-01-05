@@ -19,11 +19,11 @@ function Footer() {
             </Link>
             <span className="footer__copyright">Все права защищены © 2023</span>
           </div>
-          <div className="footer__column">
+          <div id="feedback" className="footer__column">
             <h3 className="footer__form-title">Нужна помощь? Пишите нам</h3>
             <Form button={"Отправить"} />
           </div>
-          <div className="footer__column">
+          <div id="contacts" className="footer__column">
             <div className="footer__social">
               <a target="_blank" href="#">
                 <img src={tg} />

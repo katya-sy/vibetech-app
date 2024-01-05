@@ -22,14 +22,14 @@ const Header = observer(() => {
           </Link>
           <div className="header__nav">
             <Link to={CATEGORIES_ROUTE}>Категории</Link>
-            <a href="#">Обратная связь</a>
-            <a href="#">Контакты</a>
+            <a href="#feedback">Обратная связь</a>
+            <a href="#contacts">Контакты</a>
           </div>
           {user.isAuth ? (
             <div className="header__icons">
-              <button>
+              <Link to={CATEGORIES_ROUTE}>
                 <img src={search} />
-              </button>
+              </Link>
               <button>
                 <img src={cart} />
               </button>
@@ -42,9 +42,9 @@ const Header = observer(() => {
             </div>
           ) : (
             <div className="header__icons">
-              <button>
+              <Link to={CATEGORIES_ROUTE}>
                 <img src={search} />
-              </button>
+              </Link>
               <button onClick={() => user.setIsAuth(true)}>
                 <img src={userIcon} />
               </button>
