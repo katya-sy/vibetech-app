@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../main";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
@@ -10,8 +10,12 @@ import userIcon from "../assets/img/user.svg";
 import { CATEGORIES_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { observer } from "mobx-react-lite";
 
-const Header = observer(() => {
+const Header = observer(({ setModalVisible }) => {
   const { user } = useContext(Context);
+
+  function openModal() {
+    setModalVisible(true);
+  }
 
   return (
     <header className="header">
@@ -45,7 +49,7 @@ const Header = observer(() => {
               <Link to={CATEGORIES_ROUTE}>
                 <img src={search} />
               </Link>
-              <button onClick={() => user.setIsAuth(true)}>
+              <button onClick={openModal}>
                 <img src={userIcon} />
               </button>
             </div>
