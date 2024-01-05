@@ -56,3 +56,14 @@ body {
   font-family: var(--font-accent);
   font-size: 48px;
 }
+
+.form__title {
+  margin: 0;
+}
+
+.help {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+}
