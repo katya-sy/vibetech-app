@@ -1,4 +1,4 @@
-.device-main {
+.device-main__content {
   display: flex;
   gap: 180px;
 }
@@ -22,7 +22,7 @@
   height: 100%;
 }
 
-.device-main__info {
+.device-main__content-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -51,4 +51,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.device-main__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.device-main__info-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.device-main__info-item > * {
+  color: var(--dark);
+  font-size: 24px;
 }
