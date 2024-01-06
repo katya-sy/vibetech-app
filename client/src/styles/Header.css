@@ -36,3 +36,24 @@
     gap: 5px;
   }
 }
+
+@media (max-width: 576px) {
+  .header__wrapper {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .header__nav > * {
+    font-size: 12px;
+  }
+
+  .header__icons {
+    gap: 10px;
+  }
+
+  .header__icons > *,
+  .header__icons img {
+    width: 30px;
+    height: 30px;
+  }
+}

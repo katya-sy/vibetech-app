@@ -98,3 +98,13 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 576px) {
+  .device-main__content {
+    flex-direction: column;
+  }
+
+  .device-main__images {
+    max-width: 100%;
+  }
+}

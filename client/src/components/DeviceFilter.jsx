@@ -8,7 +8,7 @@ import "../styles/DeviceFilter.css";
 function DeviceFilter() {
   return (
     <div className="device-filter">
-      <Input style={{ width: 570 }} placeholder={"Поиск..."} />
+      <Input placeholder={"Поиск..."} />
       <div className="device-filter__btns">
         <Button>
           <div className="device-filter__btn">

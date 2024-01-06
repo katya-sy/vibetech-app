@@ -5,6 +5,10 @@
   gap: 30px;
 }
 
+.device-filter > * {
+  width: 570px;
+}
+
 .device-filter__btns {
   display: flex;
   gap: 20px;
@@ -24,5 +28,13 @@
   font-size: 12px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 576px) {
+  .device-filter {
+    flex-direction: column;
+    min-width: 100%;
+  }
+
+  .device-filter > * {
+    width: 320px;
+  }
 }

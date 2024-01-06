@@ -24,3 +24,13 @@
   color: var(--dark);
   font-size: 36px;
 }
+
+@media (max-width: 576px) {
+  .promo h2:nth-child(2) {
+    font-size: 36px;
+  }
+
+  .promo h2:nth-child(3) {
+    font-size: 24px;
+  }
+}
