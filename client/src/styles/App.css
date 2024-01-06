@@ -74,5 +74,12 @@ body {
   color: var(--accent);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+  .wrapper {
+    position: relative;
+  }
+
+  .wrapper__content {
+    max-width: 100%;
+  }
 }

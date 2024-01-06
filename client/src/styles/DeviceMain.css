@@ -74,3 +74,27 @@
   color: var(--dark);
   font-size: 24px;
 }
+
+@media (max-width: 1200px) {
+  .device-main__content {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .device-main__images {
+    max-width: 340px;
+  }
+
+  .device-main__title {
+    font-size: 36px;
+  }
+
+  .device-main__desc {
+    font-size: 16px;
+  }
+
+  .device-main__info-item > * {
+    font-size: 16px;
+  }
+}

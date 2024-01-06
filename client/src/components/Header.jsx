@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Context } from "../main";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
@@ -10,7 +10,7 @@ import userIcon from "../assets/img/user.svg";
 import { CATEGORIES_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { observer } from "mobx-react-lite";
 
-const Header = observer(({ openModal }) => {
+const Header = observer(({ openModal, isMobile }) => {
   const { user } = useContext(Context);
 
   return (
@@ -21,7 +21,7 @@ const Header = observer(({ openModal }) => {
             <img src={logo} alt="Logo" />
           </Link>
           <div className="header__nav">
-            <Link to={CATEGORIES_ROUTE}>Категории</Link>
+            {isMobile && <button onClick={() => {}}>Категории</button>}
             <a href="#feedback">Обратная связь</a>
             <a href="#contacts">Контакты</a>
           </div>

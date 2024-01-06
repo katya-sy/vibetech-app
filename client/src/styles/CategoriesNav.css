@@ -1,7 +1,12 @@
 .categories-nav {
+  position: relative;
   width: 270px;
   min-width: 240px;
   padding: 20px 10px;
+}
+
+.close-icon {
+  display: none;
 }
 
 .categories-nav li {
@@ -20,4 +25,24 @@
 
 .categories-nav span:hover {
   color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .close-icon {
+    position: absolute;
+    display: block;
+    top: 15px;
+    right: 15px;
+  }
+
+  .categories-nav {
+    position: absolute;
+    left: -300px;
+    background-color: var(--dark);
+    z-index: 1;
+  }
+
+  .categories-nav span {
+    color: var(--light);
+  }
 }
