@@ -8,7 +8,7 @@ const Categories = observer(() => {
   return (
     <div className="wrapper">
       <CategoriesNav />
-      <div>
+      <div className="wrapper__content">
         <DeviceFilter />
         <DeviceList />
       </div>

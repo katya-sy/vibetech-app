@@ -14,8 +14,10 @@ function DeviceCard({ device }) {
       className="device-card"
       onClick={() => router(`${DEVICE_ROUTE}/${device.id}`)}
     >
-      <img src={device.img[0]} alt="Device" />
-      <h4 className="device-card__title">{device.name}</h4>
+      <div>
+        <img src={device.img[0]} alt="Device" />
+        <h4 className="device-card__title">{device.name}</h4>
+      </div>
       <div>
         <p className="device-card__price">{device.price + " ₽"}</p>
         <div className="device-card__btns">

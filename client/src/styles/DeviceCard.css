@@ -1,9 +1,13 @@
 .device-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 270px;
   color: var(--dark);
 }
 
 .device-card img {
+  width: 100%;
   margin-bottom: 30px;
 }
 

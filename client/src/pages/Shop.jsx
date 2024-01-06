@@ -8,7 +8,7 @@ const Shop = observer(() => {
   return (
     <div className="wrapper">
       <CategoriesNav />
-      <div>
+      <div className="wrapper__content">
         <Promo />
         <h2 className="title">Товары недели!</h2>
         <DeviceList deviceCount={3} />

@@ -41,13 +41,19 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1210px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+}
+
+.wrapper__content {
+  max-width: calc(100% - 270px);
 }
 
 .title {
@@ -66,4 +72,7 @@ body {
   align-items: center;
   gap: 10px;
   color: var(--accent);
+}
+
+@media (max-width: 1024px) {
 }

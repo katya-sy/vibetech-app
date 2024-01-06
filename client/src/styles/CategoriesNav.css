@@ -1,5 +1,6 @@
 .categories-nav {
   width: 270px;
+  min-width: 240px;
   padding: 20px 10px;
 }
 
