@@ -59,6 +59,19 @@
   justify-content: space-between;
 }
 
+.device-main__btn {
+  transition: filter 0.3s ease-in-out;
+}
+
+.device-main__btn:hover {
+  filter: brightness(0.8);
+}
+
+.device-main__btn--active {
+  filter: grayscale(100%) contrast(100%) brightness(120%) sepia(100%)
+    saturate(10000%) hue-rotate(900deg);
+}
+
 .device-main__info-wrapper {
   display: flex;
   flex-direction: column;

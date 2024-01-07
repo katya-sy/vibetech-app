@@ -17,7 +17,7 @@ const Header = observer(({ openModal, isMobile }) => {
     <header className="header">
       <div className="container">
         <div className="header__wrapper">
-          <Link to={SHOP_ROUTE} className="header__logo">
+          <Link to={SHOP_ROUTE} className="logo header__logo">
             <img src={logo} alt="Logo" />
           </Link>
           <div className="header__nav">

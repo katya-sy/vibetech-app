@@ -6,7 +6,11 @@
   color: var(--dark);
 }
 
-.device-card img {
+.device-card:hover .device-card__title {
+  color: var(--accent);
+}
+
+.device-card__img {
   width: 100%;
   margin-bottom: 30px;
 }
@@ -16,6 +20,7 @@
   font-family: var(--font-accent);
   font-size: 20px;
   margin-bottom: 15px;
+  transition: color 0.3s ease-in-out;
 }
 
 .device-card__btns {

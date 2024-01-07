@@ -22,11 +22,24 @@
 .header__nav > * {
   color: var(--light);
   font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.header__nav > *:hover {
+  color: var(--accent);
 }
 
 .header__icons {
   display: flex;
   gap: 20px;
+}
+
+.header__icons > * {
+  transition: filter 0.3s ease-in-out;
+}
+
+.header__icons > *:hover {
+  filter: brightness(0.7);
 }
 
 @media (max-width: 1024px) {

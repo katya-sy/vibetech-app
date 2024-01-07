@@ -32,6 +32,14 @@
   gap: 20px;
 }
 
+.footer__social > * {
+  transition: filter 0.3s ease-in-out;
+}
+
+.footer__social > *:hover {
+  filter: brightness(0.7);
+}
+
 .footer__contact {
   display: flex;
   flex-direction: column;
@@ -41,6 +49,11 @@
 .footer__contact a {
   color: var(--light);
   font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__contact > *:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 1024px) {

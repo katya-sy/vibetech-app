@@ -10,3 +10,7 @@
   resize: none;
   height: 75px;
 }
+
+.input:focus {
+  outline: 2px solid var(--accent);
+}

@@ -37,7 +37,12 @@ function DeviceMain() {
           </div>
           <div className="device-main__btns">
             <Button style={{ width: "50%" }}>Купить</Button>
-            <button>
+            <button
+              className="device-main__btn"
+              onClick={(e) =>
+                e.target.classList.toggle("device-main__btn--active")
+              }
+            >
               <img src={heart} />
             </button>
           </div>

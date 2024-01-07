@@ -14,7 +14,7 @@ function Footer() {
       <div className="container">
         <div className="footer__wrapper">
           <div className="footer__column">
-            <Link to={SHOP_ROUTE}>
+            <Link className="logo" to={SHOP_ROUTE}>
               <img src={logo} />
             </Link>
             <span className="footer__copyright">Все права защищены © 2023</span>

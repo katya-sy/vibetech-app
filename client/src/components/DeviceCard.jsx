@@ -15,7 +15,9 @@ function DeviceCard({ device }) {
       onClick={() => router(`${DEVICE_ROUTE}/${device.id}`)}
     >
       <div>
-        <img src={device.img[0]} alt="Device" />
+        <picture>
+          <img className="device-card__img" src={device.img[0]} alt="Device" />
+        </picture>
         <h4 className="device-card__title">{device.name}</h4>
       </div>
       <div>
