@@ -47,7 +47,7 @@ function App() {
       <Modal modalVisible={modalVisible} setModalVisible={setModalVisible}>
         <h2 className="title form__title">Вход</h2>
         <Form buttonText={"Войти"} login={login} />
-        <div style={{ display: "flex", gap: 40 }}>
+        <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
           <button style={{ color: "var(--accent)" }} onClick={openModal}>
             Зарегистрироваться
           </button>
