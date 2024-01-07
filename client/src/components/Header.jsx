@@ -11,7 +11,7 @@ import { CATEGORIES_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { observer } from "mobx-react-lite";
 
 const Header = observer(({ openModal, isMobile }) => {
-  const { user } = useContext(Context);
+  const { user, isButtonClick } = useContext(Context);
 
   return (
     <header className="header">
@@ -21,7 +21,15 @@ const Header = observer(({ openModal, isMobile }) => {
             <img src={logo} alt="Logo" />
           </Link>
           <div className="header__nav">
-            {isMobile && <button onClick={() => {}}>Категории</button>}
+            {isMobile && (
+              <button
+                onClick={() =>
+                  isButtonClick.setIsButtonClick(!isButtonClick.isButtonClick)
+                }
+              >
+                Категории
+              </button>
+            )}
             <a href="#feedback">Обратная связь</a>
             <a href="#contacts">Контакты</a>
           </div>

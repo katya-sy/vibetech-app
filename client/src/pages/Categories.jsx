@@ -2,9 +2,8 @@ import React from "react";
 import CategoriesNav from "../components/CategoriesNav";
 import DeviceFilter from "../components/DeviceFilter";
 import DeviceList from "../components/DeviceList";
-import { observer } from "mobx-react-lite";
 
-const Categories = observer(() => {
+const Categories = () => {
   return (
     <div className="wrapper">
       <CategoriesNav />
@@ -14,6 +13,6 @@ const Categories = observer(() => {
       </div>
     </div>
   );
-});
+};
 
 export default Categories;

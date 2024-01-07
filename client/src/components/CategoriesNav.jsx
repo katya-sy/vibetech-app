@@ -5,11 +5,22 @@ import { observer } from "mobx-react-lite";
 import close from "../assets/img/close.svg";
 
 const CategoriesNav = observer(() => {
-  const { device } = useContext(Context);
+  const { device, isButtonClick } = useContext(Context);
 
   return (
-    <div className="categories-nav">
-      <img src={close} className="close-icon" />
+    <div
+      className={
+        isButtonClick.isButtonClick
+          ? "categories-nav categories-nav--active"
+          : "categories-nav"
+      }
+    >
+      <button
+        className="close-icon"
+        onClick={() => isButtonClick.setIsButtonClick(false)}
+      >
+        <img src={close} />
+      </button>
       <ul>
         {device.types.map((type) => (
           <li
