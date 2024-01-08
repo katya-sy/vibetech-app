@@ -60,11 +60,11 @@
 }
 
 .device-main__btn {
-  transition: filter 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .device-main__btn:hover {
-  filter: brightness(0.8);
+  opacity: 0.6;
 }
 
 .device-main__btn--active {

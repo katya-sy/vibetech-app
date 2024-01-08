@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Promo.css";
 import fav from "../assets/img/add-fav.svg";
@@ -8,6 +8,7 @@ import { DEVICE_ROUTE } from "../utils/consts";
 
 function DeviceCard({ device }) {
   const router = useNavigate();
+  const [favourite, setFavourite] = useState(false);
 
   return (
     <div className="device-card">
@@ -21,9 +22,8 @@ function DeviceCard({ device }) {
         <p className="device-card__price">{device.price + " ₽"}</p>
         <div className="device-card__btns">
           <button
-            onClick={(e) =>
-              e.target.classList.toggle("device-card__btn-active")
-            }
+            className={favourite ? "device-card__btn-active" : undefined}
+            onClick={() => setFavourite((favourite) => !favourite)}
           >
             <img src={fav} />
           </button>
