@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../assets/img/logo.svg";
 import "../styles/Footer.css";
 import Form from "./UI/form/Form";

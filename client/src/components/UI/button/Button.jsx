@@ -1,4 +1,3 @@
-import React from "react";
 import cl from "./Button.module.css";
 
 function Button({ children, ...props }) {

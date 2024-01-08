@@ -1,4 +1,3 @@
-import React from "react";
 import CategoriesNav from "../components/CategoriesNav";
 import DeviceFilter from "../components/DeviceFilter";
 import DeviceList from "../components/DeviceList";

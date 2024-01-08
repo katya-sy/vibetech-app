@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter";
 import Header from "./components/Header";
@@ -12,7 +12,7 @@ import help from "./assets/img/help.svg";
 function App() {
   const [modalVisible, setModalVisible] = useState(false);
   const [regModalVisible, setRegModalVisible] = useState(false);
-  const { user, input } = useContext(Context);
+  const { user } = useContext(Context);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {

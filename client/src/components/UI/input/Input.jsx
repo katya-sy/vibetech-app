@@ -1,4 +1,3 @@
-import React from "react";
 import cl from "./Input.module.css";
 
 function Input({ tag, register, error, ...props }) {

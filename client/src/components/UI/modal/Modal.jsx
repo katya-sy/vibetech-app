@@ -1,4 +1,3 @@
-import React, { useContext } from "react";
 import cl from "./Modal.module.css";
 import close from "../../../assets/img/close.svg";
 

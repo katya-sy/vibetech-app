@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { authRoutes, publicRoutes } from "../router";
 import { SHOP_ROUTE } from "../utils/consts";
@@ -6,7 +6,6 @@ import { Context } from "../main";
 
 function AppRouter() {
   const { user } = useContext(Context);
-  const [showCategories, setShowCategories] = useState(false);
 
   return (
     <Routes>

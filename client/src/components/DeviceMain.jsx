@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "./UI/button/Button.jsx";
 import heart from "../assets/img/heart.svg";
 import "../styles/DeviceMain.css";
