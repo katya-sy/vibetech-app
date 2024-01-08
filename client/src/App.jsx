@@ -12,7 +12,7 @@ import help from "./assets/img/help.svg";
 function App() {
   const [modalVisible, setModalVisible] = useState(false);
   const [regModalVisible, setRegModalVisible] = useState(false);
-  const { user } = useContext(Context);
+  const { user, input } = useContext(Context);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -28,10 +28,12 @@ function App() {
     user.setIsAuth(true);
     setModalVisible(false);
     setRegModalVisible(false);
+    input.cleanInputs(e);
   };
 
-  function openModal() {
+  function openModal(e) {
     if (modalVisible) {
+      input.cleanInputs(e);
       setRegModalVisible(true);
       setModalVisible(false);
     } else setModalVisible(true);
@@ -39,7 +41,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header openModal={openModal} isMobile={isMobile} />
+      <Header openModal={(e) => openModal(e)} isMobile={isMobile} />
       <div className="container">
         <AppRouter />
       </div>
@@ -48,7 +50,10 @@ function App() {
         <h2 className="title form__title">Вход</h2>
         <Form buttonText={"Войти"} login={login} />
         <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-          <button style={{ color: "var(--accent)" }} onClick={openModal}>
+          <button
+            style={{ color: "var(--accent)" }}
+            onClick={(e) => openModal(e)}
+          >
             Зарегистрироваться
           </button>
           <button className="help">
