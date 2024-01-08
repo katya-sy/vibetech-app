@@ -23,17 +23,14 @@ function App() {
     window.addEventListener("resize", handleResize);
   }, [isMobile]);
 
-  const login = (e) => {
-    e.preventDefault();
+  const login = () => {
     user.setIsAuth(true);
     setModalVisible(false);
     setRegModalVisible(false);
-    input.cleanInputs(e);
   };
 
-  function openModal(e) {
+  function openModal() {
     if (modalVisible) {
-      input.cleanInputs(e);
       setRegModalVisible(true);
       setModalVisible(false);
     } else setModalVisible(true);
@@ -41,7 +38,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header openModal={(e) => openModal(e)} isMobile={isMobile} />
+      <Header openModal={() => openModal()} isMobile={isMobile} />
       <div className="container">
         <AppRouter />
       </div>
@@ -52,7 +49,7 @@ function App() {
         <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
           <button
             style={{ color: "var(--accent)" }}
-            onClick={(e) => openModal(e)}
+            onClick={() => openModal()}
           >
             Зарегистрироваться
           </button>

@@ -8,65 +8,81 @@ import { useForm } from "react-hook-form";
 
 const Form = observer(
   ({ buttonText, feedbackForm, registrationForm, login }) => {
-    const { input } = useContext(Context);
-    const { register, handleSubmit, reset } = useForm();
+    const {
+      register,
+      handleSubmit,
+      watch,
+      reset,
+      formState: { errors },
+    } = useForm();
+    const onSubmit = (data) => {
+      console.log(data);
+      if (feedbackForm) {
+        reset();
+      } else {
+        login();
+        reset();
+      }
+    };
 
     return (
-      <form className={cl.form} onSubmit={handleSubmit()}>
+      <form className={cl.form} onSubmit={handleSubmit(onSubmit)}>
         <Input
           placeholder={"Имя"}
-          {...register("name")}
-          // value={input.name}
-          // onChange={(e) => input.setName(e.target.value)}
+          register={register("name", { required: true })}
+          aria-invalid={errors.name ? "true" : "false"}
+          error={errors.name}
         />
         {(feedbackForm || registrationForm) && (
           <Input
             type={"email"}
             placeholder={"E-mail"}
-            {...register("email")}
-            // value={input.email}
-            // onChange={(e) => input.setEmail(e.target.value)}
+            register={register("email", { required: true })}
+            aria-invalid={errors.email ? "true" : "false"}
+            error={errors.email}
           />
         )}
         {(login || registrationForm) && (
           <Input
             type={"password"}
             placeholder={"Пароль"}
-            value={input.password}
-            onChange={(e) => input.setPassword(e.target.value)}
+            register={register("password", {
+              required: true,
+              minLength: 8,
+              pattern: /^[a-zA-Z0-9]+$/,
+            })}
+            aria-invalid={errors.password ? "true" : "false"}
+            error={errors.password}
           />
         )}
         {registrationForm && (
           <Input
             type={"password"}
             placeholder={"Повторите пароль"}
-            value={input.doublePassword}
-            onChange={(e) => input.setDoublePassword(e.target.value)}
+            register={register("doublePassword", {
+              required: true,
+              minLength: 8,
+              pattern: /^[a-zA-Z0-9]+$/,
+              validate: (val) => {
+                if (watch("password") !== val) {
+                  return "true";
+                }
+              },
+            })}
+            aria-invalid={errors.doublePassword ? "true" : "false"}
+            error={errors.doublePassword}
           />
         )}
         {feedbackForm && (
           <Input
             placeholder={"Сообщение"}
             tag={"textarea"}
-            // value={input.message}
-            // onChange={(e) => input.setMessage(e.target.value)}
-            {...register("message")}
+            register={register("message", { required: true })}
+            aria-invalid={errors.message ? "true" : "false"}
+            error={errors.message}
           />
         )}
-        <Button
-          style={{ width: "100%" }}
-          onClick={
-            () => reset()
-            //   (e) => {
-            //   feedbackForm
-            //     ? //  input.cleanInputs(e)
-            //       reset()
-            //     : login(e);
-            // }
-          }
-        >
-          {buttonText}
-        </Button>
+        <Button style={{ width: "100%" }}>{buttonText}</Button>
       </form>
     );
   }
