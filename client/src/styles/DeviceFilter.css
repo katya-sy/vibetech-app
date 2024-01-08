@@ -35,6 +35,6 @@
   }
 
   .device-filter > * {
-    width: 320px;
+    max-width: calc(100vw - 50px);
   }
 }
