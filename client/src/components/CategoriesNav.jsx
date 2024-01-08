@@ -29,7 +29,7 @@ const CategoriesNav = observer(() => {
               device.setSelectedType(type);
             }}
           >
-            <img src={type.img} />
+            {/* <img src={type.img} /> */}
             <span>{type.name}</span>
           </li>
         ))}
