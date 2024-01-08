@@ -4,24 +4,28 @@ import Input from "../input/Input";
 import Button from "../button/Button";
 import { Context } from "../../../main";
 import { observer } from "mobx-react-lite";
+import { useForm } from "react-hook-form";
 
 const Form = observer(
   ({ buttonText, feedbackForm, registrationForm, login }) => {
     const { input } = useContext(Context);
+    const { register, handleSubmit, reset } = useForm();
 
     return (
-      <form className={cl.form}>
+      <form className={cl.form} onSubmit={handleSubmit()}>
         <Input
           placeholder={"Имя"}
-          value={input.name}
-          onChange={(e) => input.setName(e.target.value)}
+          {...register("name")}
+          // value={input.name}
+          // onChange={(e) => input.setName(e.target.value)}
         />
         {(feedbackForm || registrationForm) && (
           <Input
             type={"email"}
             placeholder={"E-mail"}
-            value={input.email}
-            onChange={(e) => input.setEmail(e.target.value)}
+            {...register("email")}
+            // value={input.email}
+            // onChange={(e) => input.setEmail(e.target.value)}
           />
         )}
         {(login || registrationForm) && (
@@ -44,15 +48,22 @@ const Form = observer(
           <Input
             placeholder={"Сообщение"}
             tag={"textarea"}
-            value={input.message}
-            onChange={(e) => input.setMessage(e.target.value)}
+            // value={input.message}
+            // onChange={(e) => input.setMessage(e.target.value)}
+            {...register("message")}
           />
         )}
         <Button
           style={{ width: "100%" }}
-          onClick={(e) => {
-            feedbackForm ? input.cleanInputs(e) : login(e);
-          }}
+          onClick={
+            () => reset()
+            //   (e) => {
+            //   feedbackForm
+            //     ? //  input.cleanInputs(e)
+            //       reset()
+            //     : login(e);
+            // }
+          }
         >
           {buttonText}
         </Button>
