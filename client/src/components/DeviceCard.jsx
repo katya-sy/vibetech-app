@@ -10,11 +10,8 @@ function DeviceCard({ device }) {
   const router = useNavigate();
 
   return (
-    <div
-      className="device-card"
-      onClick={() => router(`${DEVICE_ROUTE}/${device.id}`)}
-    >
-      <div>
+    <div className="device-card">
+      <div onClick={() => router(`${DEVICE_ROUTE}/${device.id}`)}>
         <picture>
           <img className="device-card__img" src={device.img[0]} alt="Device" />
         </picture>
@@ -23,7 +20,11 @@ function DeviceCard({ device }) {
       <div>
         <p className="device-card__price">{device.price + " ₽"}</p>
         <div className="device-card__btns">
-          <button>
+          <button
+            onClick={(e) =>
+              e.target.classList.toggle("device-card__btn-active")
+            }
+          >
             <img src={fav} />
           </button>
           <button>
